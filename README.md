@@ -58,10 +58,10 @@ FAILED: Build did NOT complete successfully (2 packages loaded, 5 targets config
 ```
 
 ## Repro: `mvn`
-cd `mvn`; mvn install
+`cd mvn; mvn install`
 
 ## Repro: `bazel`
-cd `bazel`; bazel build //...
+`cd bazel; bazel build //...`
 
 ## Workaround
 
