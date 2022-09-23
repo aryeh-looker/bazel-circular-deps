@@ -1,4 +1,15 @@
-# Working with Dependencies w/Circular Deps
+# Working with Maven Dependencies w/Circular Deps in Bazel
+
+## Background
+
+Sometimes maven packages are misconfigured and have circular dependencies that are algorithmically resolvable. An example is the antlr stringtemplate library:
+
+* https://repo1.maven.org/maven2/org/antlr/stringtemplate/4.0.2/stringtemplate-4.0.2.pom
+* https://repo1.maven.org/maven2/org/antlr/antlr-runtime/3.3/antlr-runtime-3.3.pom
+
+i.e. `stringtemplate` relies on `antlr-runtime`, which relies on `stringtemplate`
+
+## Differences between mvn and bazel
 
 maven when adding a dep with a circular dependency "just works":
 ```
