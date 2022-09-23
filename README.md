@@ -57,6 +57,12 @@ INFO: 0 processes.
 FAILED: Build did NOT complete successfully (2 packages loaded, 5 targets configured)
 ```
 
+## Repro: `mvn`
+cd `mvn`; mvn install
+
+## Repro: `bazel`
+cd `bazel`; bazel build //...
+
 ## Workaround
 
 ```
